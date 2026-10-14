@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/Test-ClaudeProxy.ps1\" -Hook",
+            "timeout": 90,
+            "statusMessage": "检测代理 127.0.0.1:12334 到 claude.ai 的连线..."
+          }
+        ]
+      }
+    ]
+  }
+}
